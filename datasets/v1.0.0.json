@@ -1,0 +1,103 @@
+{
+  "dataset_version": "v1.0.0",
+  "created_date": "2026-11-02",
+  "description": "Human-curated ground truth evaluation dataset featuring standard and adversarial edge cases.",
+  "test_cases": [
+    {
+      "id": "TC-001",
+      "email_text": "Hey, my payment went through twice for this month's subscription. Can I get a refund?",
+      "expected_category": "billing",
+      "expected_summary": "Customer requests a refund for a duplicate subscription payment.",
+      "expected_difficulty": "easy",
+      "notes": "Standard, clear-cut billing inquiry."
+    },
+    {
+      "id": "TC-002",
+      "email_text": "Refund pls",
+      "expected_category": "billing",
+      "expected_summary": "Customer is briefly asking for a refund.",
+      "expected_difficulty": "easy",
+      "notes": "Extremely short email test case."
+    },
+    {
+      "id": "TC-003",
+      "email_text": "Hellow, my accout is locked and I cant logiin no matter what I try. Please fix!!",
+      "expected_category": "account",
+      "expected_summary": "Customer cannot log in because their account is locked.",
+      "expected_difficulty": "medium",
+      "notes": "Contains heavy spelling typos (accout, cant, logiin, Hellow)."
+    },
+    {
+      "id": "TC-004",
+      "email_text": "The mobile app crashes with error code 500 every single time I click upload profile picture.",
+      "expected_category": "technical",
+      "expected_summary": "The mobile app crashes with error code 500 when attempting to upload a profile picture.",
+      "expected_difficulty": "easy",
+      "notes": "Standard technical bug report with error code."
+    },
+    {
+      "id": "TC-005",
+      "email_text": "مرحبا، my password reset link isn't working أرجو المساعدة",
+      "expected_category": "account",
+      "expected_summary": "Customer needs assistance because their password reset link is not working.",
+      "expected_difficulty": "medium",
+      "notes": "Mixed language (Arabic and English script)."
+    },
+    {
+      "id": "TC-006",
+      "email_text": "Oh fantastic, another month of paying for a broken feature that logs me out every 5 minutes. Real great software.",
+      "expected_category": "technical",
+      "expected_summary": "Customer expresses frustration about a bug causing frequent logouts.",
+      "expected_difficulty": "hard",
+      "notes": "Sarcastic tone; tests if model focuses on the core technical bug (logouts) rather than getting confused by emotion."
+    },
+    {
+      "id": "TC-007",
+      "email_text": "Hi, I was charged twice because your payment gateway froze during checkout. Also the app gave me an error 404.",
+      "expected_category": "billing",
+      "expected_summary": "Customer was charged twice due to a gateway freeze during checkout.",
+      "expected_difficulty": "hard",
+      "notes": "Ambiguous/Overlap: Mentions both technical failure (gateway freeze, 404) and billing (charged twice). Correct label is billing because the financial impact takes priority."
+    },
+    {
+      "id": "TC-008",
+      "email_text": "Do you guys support custom enterprise invoicing and annual wire transfers?",
+      "expected_category": "billing",
+      "expected_summary": "Customer inquires about custom enterprise invoicing and annual wire transfer options.",
+      "expected_difficulty": "medium",
+      "notes": "Borderline between billing and general info."
+    },
+    {
+      "id": "TC-009",
+      "email_text": "Where is my invoice for last month?",
+      "expected_category": "billing",
+      "expected_summary": "Customer is asking for last month's invoice.",
+      "expected_difficulty": "easy",
+      "notes": "Short, straightforward billing document request."
+    },
+    {
+      "id": "TC-010",
+      "email_text": "Delete my account and all associated data permanently please.",
+      "expected_category": "account",
+      "expected_summary": "Customer requests permanent deletion of their account and data.",
+      "expected_difficulty": "easy",
+      "notes": "Standard account management request."
+    },
+    {
+      "id": "TC-011",
+      "email_text": "Is your API down right now? None of our webhooks are firing.",
+      "expected_category": "technical",
+      "expected_summary": "Customer is asking if the API is down because webhooks are failing.",
+      "expected_difficulty": "easy",
+      "notes": "Infrastructure/system status inquiry."
+    },
+    {
+      "id": "TC-012",
+      "email_text": "Hi, what are your standard customer support hours over the weekend?",
+      "expected_category": "general",
+      "expected_summary": "Customer asks about support team operating hours over the weekend.",
+      "expected_difficulty": "easy",
+      "notes": "Standard general informational inquiry."
+    }
+  ]
+}

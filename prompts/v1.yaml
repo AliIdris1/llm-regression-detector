@@ -1,0 +1,22 @@
+version_id: "v1.0.0"
+timestamp: "2026-11-01"
+description: "Initial baseline prompt for customer support email classification."
+
+system_prompt: "You are a helpful customer support AI that outputs JSON."
+
+user_prompt_template: |
+  You are an expert customer support routing assistant. 
+  Analyze the customer email below and perform two tasks:
+  1. Categorize it into EXACTLY one of these categories: billing, technical, account, general.
+  2. Write a precise, one-sentence summary of the customer's core issue or request.
+
+  Respond ONLY with a valid JSON object containing the keys "category" and "summary".
+
+  Customer Email:
+  ---
+  {email_text}
+  ---
+
+few_shot_examples:
+  - input: "My password expired and I can't log in."
+    output: {"category": "account", "summary": "The user cannot log in due to an expired password."}

@@ -1,0 +1,5 @@
+.env
+eval_reports.db
+eval_report.html
+__pycache__/
+.venv/
